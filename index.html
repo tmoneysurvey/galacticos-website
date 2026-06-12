@@ -373,6 +373,16 @@ if(window.self!==window.top){
             </div>
 
             <div class="form-group">
+              <label for="location">Preferred Location *</label>
+              <select id="location" name="location" required>
+                <option value="">Select a location...</option>
+                <option value="Riverside">Riverside</option>
+                <option value="Fontana">Fontana</option>
+                <option value="Pomona">Pomona</option>
+              </select>
+            </div>
+
+            <div class="form-group">
               <label for="date">Interested Start Date</label>
               <input type="date" id="date" name="date" placeholder="">
             </div>
@@ -380,6 +390,20 @@ if(window.self!==window.top){
             <div class="form-group">
               <label for="message">Additional Details</label>
               <textarea id="message" name="message" placeholder="Tell us more about your interest..."></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="optinContact" name="optinContact" value="yes">
+                <span class="checkbox-text">I'd like to receive information and updates from Galacticos</span>
+              </label>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" id="optinOffer" name="optinOffer" value="yes">
+                <span class="checkbox-text">I'm interested in the limited 1 month free training offer</span>
+              </label>
             </div>
 
             <button type="submit" class="btn btn-primary">Send Inquiry</button>
@@ -411,12 +435,14 @@ if(window.self!==window.top){
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
         const program = document.getElementById('program').value;
+        const location = document.getElementById('location').value;
 
         const errors = [];
         if (!name) errors.push('Name is required');
         if (!email) errors.push('Email is required');
         if (!phone) errors.push('Phone is required');
         if (!program) errors.push('Program interest is required');
+        if (!location) errors.push('Preferred location is required');
 
         if (errors.length > 0) {
           e.preventDefault();
