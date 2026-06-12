@@ -304,23 +304,87 @@ if(window.self!==window.top){
     <section class="section contact-section" id="contact" aria-labelledby="contact-title">
       <div class="container contact-container">
         <div class="section-intro gsap-hidden">
-          <p class="section-label">Start Here</p>
+          <p class="section-label">Get In Touch</p>
           <h2 id="contact-title" class="section-heading">Join the Club</h2>
         </div>
 
-        <div class="contact-form-card gsap-hidden" id="contact-card">
-          <p class="contact-card-intro">Tryouts, programs, or partnership questions — reach out and we'll respond within one business day.</p>
-          <div class="contact-email-grid">
-            <a class="contact-email-item" href="mailto:a@genericaemail.com">
-              <span class="contact-email-icon" aria-hidden="true">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"></rect><path d="m2 7 10 7 10-7"></path></svg>
-              </span>
-              <div class="contact-email-info">
-                <span class="contact-email-name">Club Office</span>
-                <span class="contact-email-address">a@genericaemail.com</span>
+        <div class="contact-layout gsap-hidden">
+          <!-- Contact Details -->
+          <div class="contact-details">
+            <p class="contact-sub">Questions about programs, tryouts, or partnerships? Reach out below or contact us directly.</p>
+
+            <div class="contact-items">
+              <div class="contact-detail">
+                <span class="contact-icon">📧</span>
+                <div>
+                  <div class="contact-detail-label">Email</div>
+                  <a href="mailto:galacticosoccerclub@gmail.com" class="contact-detail-value">galacticosoccerclub@gmail.com</a>
+                </div>
               </div>
-            </a>
+
+              <div class="contact-detail">
+                <span class="contact-icon">📞</span>
+                <div>
+                  <div class="contact-detail-label">Phone</div>
+                  <a href="tel:+17143262912" class="contact-detail-value">(714) 326-2912</a>
+                </div>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-icon">📱</span>
+                <div>
+                  <div class="contact-detail-label">Instagram</div>
+                  <a href="https://www.instagram.com/galacticos_soccer_club/" target="_blank" rel="noopener" class="contact-detail-value">@galacticos_soccer_club</a>
+                </div>
+              </div>
+            </div>
           </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/itbythomas@gmail.com" method="POST">
+            <h3>Get Started</h3>
+
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" required>
+            </div>
+
+            <div class="form-group">
+              <label for="program">Program Interest *</label>
+              <select id="program" name="program" required>
+                <option value="">Select a program...</option>
+                <option value="Recreational">Recreational Teams</option>
+                <option value="Competitive">Competitive Teams</option>
+                <option value="Coaching">Coaching Services</option>
+                <option value="Camps">Summer Camps</option>
+                <option value="Private">Private Training</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="date">Interested Start Date</label>
+              <input type="date" id="date" name="date" placeholder="">
+            </div>
+
+            <div class="form-group">
+              <label for="message">Additional Details</label>
+              <textarea id="message" name="message" placeholder="Tell us more about your interest..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Inquiry</button>
+            <p class="form-note">We'll respond within one business day</p>
+          </form>
         </div>
       </div>
     </section>
@@ -339,6 +403,28 @@ if(window.self!==window.top){
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
   <script>
+    // CONTACT FORM VALIDATION
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const program = document.getElementById('program').value;
+
+        const errors = [];
+        if (!name) errors.push('Name is required');
+        if (!email) errors.push('Email is required');
+        if (!phone) errors.push('Phone is required');
+        if (!program) errors.push('Program interest is required');
+
+        if (errors.length > 0) {
+          e.preventDefault();
+          alert('Please complete the form:\n\n' + errors.map(err => '• ' + err).join('\n'));
+        }
+      });
+    }
+
     function fixGoogleMobileDropdown() {
       const iframe = document.querySelector('.goog-te-menu-frame');
       if (iframe && iframe.contentWindow) {
