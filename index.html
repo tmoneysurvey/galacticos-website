@@ -25,20 +25,42 @@
       align-items: center !important;
       margin-left: 20px !important;
       height: auto !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
     }
+
     #google_translate_element_mobile {
       display: flex !important;
       align-items: center !important;
       padding: 1rem 1.5rem !important;
       border-bottom: 1px solid var(--border) !important;
       font-size: 0.9rem !important;
+      max-width: 100% !important;
+      box-sizing: border-box !important;
     }
+
+    .goog-te-gadget {
+      font-family: 'Montserrat', sans-serif !important;
+      font-size: 14px !important;
+      color: #ffffff !important;
+      background: transparent !important;
+      border: none !important;
+    }
+
+    .goog-te-gadget-simple {
+      background: transparent !important;
+      border: none !important;
+      padding: 0 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+    }
+
     /* Target the text inside the simple gadget container */
-    .goog-te-gadget-simple,
     .goog-te-gadget-simple span,
     .goog-te-menu-value span {
       color: #ffffff !important; /* Resting color */
     }
+
     /* Target the active, selected, or focused state inside the widget trigger */
     .goog-te-gadget-simple:hover span,
     .goog-te-gadget-simple:active span,
@@ -46,14 +68,25 @@
     .goog-te-menu-value:hover span {
       color: #d4af37 !important; /* Active / Selected color */
     }
-    /* Target the external dropdown panel elements (if rendered in the main DOM) */
-    .goog-te-menu2-item div,
-    .goog-te-menu2-item-selected div {
-      color: #ffffff !important; /* Panel resting color */
-    }
-    .goog-te-menu2-item:hover div,
-    .goog-te-menu2-item-selected div {
-      color: #d4af37 !important; /* Panel active / selected color */
+
+    /* Handle Mobile Responsive Media Query */
+    @media (max-width: 768px) {
+      #google_translate_element {
+        margin-left: 10px !important; /* Reduce gap on mobile headers */
+      }
+
+      /* Ensure the iframe dropdown popup doesn't break mobile bounds */
+      .goog-te-menu-frame {
+        max-width: 100% !important;
+        left: 0 !important;
+        right: 0 !important;
+      }
+
+      .goog-te-menu2 {
+        max-width: 100% !important;
+        overflow-x: scroll !important;
+        box-sizing: border-box !important;
+      }
     }
   </style>
   <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
@@ -282,6 +315,22 @@ if(window.self!==window.top){
   <script src="js/ScrollToPlugin.min.js"></script>
   <script src="js/animations.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    function fixGoogleMobileDropdown() {
+      const iframe = document.querySelector('.goog-te-menu-frame');
+      if (iframe && iframe.contentWindow) {
+        const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        const menu = innerDoc.querySelector('.goog-te-menu2');
+        if (menu) {
+          menu.style.maxWidth = '100%';
+          menu.style.boxSizing = 'border-box';
+          menu.style.overflowX = 'scroll';
+        }
+      }
+    }
+    // Run check periodically to catch Google's dynamic iframe rendering
+    setInterval(fixGoogleMobileDropdown, 1000);
+  </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a0a784d25a9dfb8f',t:'MTc4MTI1MzI5MQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;"></iframe><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" data-cf-beacon="{" version":"2024.11.0","token":"7f7b0fd8732c4326aae4b9d58d5c514a","server_timing":{"name":{"cfcachestatus":true,"cfedge":true,"cfextpri":true,"cfl4":true,"cforigin":true,"cfspeedbrain":true},"location_startswith":null}}"="" crossorigin="anonymous"></script>
 
 
