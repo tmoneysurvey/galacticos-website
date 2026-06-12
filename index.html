@@ -14,8 +14,18 @@
   <!-- Google Translate Widget -->
   <script type="text/javascript">
     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element_mobile');
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        multilanguagePage: true
+      }, 'google_translate_element');
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        multilanguagePage: true
+      }, 'google_translate_element_mobile');
     }
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -69,10 +79,30 @@
       color: #d4af37 !important; /* Active / Selected color */
     }
 
+    /* Force visibility on mobile views regardless of default script hides */
+    #google_translate_element,
+    #google_translate_element_mobile,
+    .goog-te-gadget,
+    .goog-te-gadget-simple {
+      display: inline-flex !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    /* Prevent Google from stripping text content or labels on small screens */
+    .goog-te-gadget-simple * {
+      display: inline-block !important;
+    }
+
     /* Handle Mobile Responsive Media Query */
     @media (max-width: 768px) {
       #google_translate_element {
         margin-left: 10px !important; /* Reduce gap on mobile headers */
+      }
+
+      #google_translate_element_mobile {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
       }
 
       /* Ensure the iframe dropdown popup doesn't break mobile bounds */
@@ -86,6 +116,21 @@
         max-width: 100% !important;
         overflow-x: scroll !important;
         box-sizing: border-box !important;
+      }
+    }
+
+    /* Target Mobile Specific Viewports */
+    @media screen and (max-width: 480px) {
+      /* Prevent horizontal site overflow */
+      #google_translate_element,
+      #google_translate_element_mobile {
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+      }
+
+      /* Make text legible on high-density mobile screens */
+      .goog-te-gadget {
+        font-size: 14px !important;
       }
     }
   </style>
