@@ -25,33 +25,27 @@
       margin-left: 20px !important;
       height: auto !important;
     }
-    .goog-te-gadget {
-      font-family: 'Montserrat', sans-serif !important;
-      font-size: 14px !important;
-      color: #ffffff !important;
-      background: transparent !important;
-      border: none !important;
+    /* Target the text inside the simple gadget container */
+    .goog-te-gadget-simple,
+    .goog-te-gadget-simple span,
+    .goog-te-menu-value span {
+      color: #ffffff !important; /* Resting color */
     }
-    .goog-te-gadget-simple {
-      background: transparent !important;
-      border: none !important;
-      padding: 0 !important;
+    /* Target the active, selected, or focused state inside the widget trigger */
+    .goog-te-gadget-simple:hover span,
+    .goog-te-gadget-simple:active span,
+    .goog-te-gadget-simple:focus span,
+    .goog-te-menu-value:hover span {
+      color: #d4af37 !important; /* Active / Selected color */
     }
-    .goog-te-gadget-simple .goog-te-gadget-simple {
-      background: transparent !important;
-      border: none !important;
+    /* Target the external dropdown panel elements (if rendered in the main DOM) */
+    .goog-te-menu2-item div,
+    .goog-te-menu2-item-selected div {
+      color: #ffffff !important; /* Panel resting color */
     }
-    .goog-te-gadget-simple .goog-te-sel {
-      background: transparent !important;
-      border: none !important;
-      color: #ffffff !important;
-    }
-    .goog-te-gadget-simple .goog-te-sel:hover {
-      color: #d4af37 !important;
-    }
-    .goog-te-gadget-simple .goog-te-sel:active,
-    .goog-te-gadget-simple .goog-te-sel:focus {
-      color: #d4af37 !important;
+    .goog-te-menu2-item:hover div,
+    .goog-te-menu2-item-selected div {
+      color: #d4af37 !important; /* Panel active / selected color */
     }
   </style>
   <script>window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);</script>
