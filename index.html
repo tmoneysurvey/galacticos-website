@@ -42,11 +42,21 @@
     #google_translate_element_mobile {
       display: flex !important;
       align-items: center !important;
+      justify-content: flex-start !important;
+      width: 100% !important;
       padding: 1rem 1.5rem !important;
       border-bottom: 1px solid var(--border) !important;
       font-size: 0.9rem !important;
       max-width: 100% !important;
       box-sizing: border-box !important;
+      flex-shrink: 0 !important;
+      z-index: 1001 !important;
+    }
+
+    #google_translate_element_mobile .goog-te-gadget-simple {
+      display: flex !important;
+      align-items: center !important;
+      width: 100% !important;
     }
 
     .goog-te-gadget {
