@@ -17,6 +17,19 @@
     return true;
   }
 
+  function drawPentagon(ctx, x, y, size) {
+    ctx.beginPath();
+    for (var i = 0; i < 5; i++) {
+      var angle = (i * 4 * Math.PI) / 5 - Math.PI / 2;
+      var px = x + size * Math.cos(angle);
+      var py = y + size * Math.sin(angle);
+      if (i === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
+    }
+    ctx.closePath();
+    ctx.fill();
+  }
+
   function initHeroParallax() {
     if (!ensureAnimationPluginsReady()) {
       return;
@@ -133,12 +146,39 @@
     geometry.setAttribute('position', new window.THREE.BufferAttribute(positions, 3));
     geometry.setAttribute('scale', new window.THREE.BufferAttribute(scales, 1));
 
+    // Create soccer ball texture
+    var canvas = document.createElement('canvas');
+    canvas.width = 64;
+    canvas.height = 64;
+    var ctx = canvas.getContext('2d');
+
+    // Draw soccer ball (pentagon and hexagon pattern)
+    ctx.fillStyle = '#d4af37';
+    ctx.beginPath();
+    ctx.arc(32, 32, 30, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Draw black pentagons pattern
+    ctx.fillStyle = '#000000';
+    ctx.strokeStyle = '#000000';
+    ctx.lineWidth = 1;
+
+    // Pentagon at top
+    drawPentagon(ctx, 32, 15, 8);
+    // Pentagons in middle
+    drawPentagon(ctx, 20, 32, 8);
+    drawPentagon(ctx, 44, 32, 8);
+    // Pentagon at bottom
+    drawPentagon(ctx, 32, 49, 8);
+
+    var texture = new window.THREE.CanvasTexture(canvas);
+
     var material = new window.THREE.PointsMaterial({
-      color: new window.THREE.Color(0.83, 0.69, 0.22),
-      size: 4,
+      map: texture,
+      size: 20,
       sizeAttenuation: true,
       transparent: true,
-      opacity: 0.7
+      opacity: 0.8
     });
 
     var particles = new window.THREE.Points(geometry, material);
