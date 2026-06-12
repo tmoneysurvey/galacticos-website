@@ -15,11 +15,13 @@
   <script type="text/javascript">
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+      new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element_mobile');
     }
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <style>
-    #google_translate_element {
+    #google_translate_element,
+    #google_translate_element_mobile {
       display: inline-flex !important;
       align-items: center !important;
       margin-left: 20px !important;
@@ -82,6 +84,7 @@ if(window.self!==window.top){
     <a href="#services" data-scroll-target="#services">Programs</a>
     <a href="#who-we-serve" data-scroll-target="#who-we-serve">Who We Serve</a>
     <a href="#contact" data-scroll-target="#contact">Contact</a>
+    <div id="google_translate_element_mobile"></div>
   </nav>
 
   <main>
