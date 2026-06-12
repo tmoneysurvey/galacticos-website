@@ -20,12 +20,6 @@
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
         multilanguagePage: true
       }, 'google_translate_element');
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,es',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        multilanguagePage: true
-      }, 'google_translate_element_mobile');
     }
   </script>
   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -39,25 +33,6 @@
       box-sizing: border-box !important;
     }
 
-    #google_translate_element_mobile {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: flex-start !important;
-      width: 100% !important;
-      padding: 1rem 1.5rem !important;
-      border-bottom: 1px solid var(--border) !important;
-      font-size: 0.9rem !important;
-      max-width: 100% !important;
-      box-sizing: border-box !important;
-      flex-shrink: 0 !important;
-      z-index: 1001 !important;
-    }
-
-    #google_translate_element_mobile .goog-te-gadget-simple {
-      display: flex !important;
-      align-items: center !important;
-      width: 100% !important;
-    }
 
     .goog-te-gadget {
       font-family: 'Montserrat', sans-serif !important;
@@ -91,7 +66,6 @@
 
     /* Force visibility on mobile views regardless of default script hides */
     #google_translate_element,
-    #google_translate_element_mobile,
     .goog-te-gadget,
     .goog-te-gadget-simple {
       display: inline-flex !important;
@@ -110,10 +84,6 @@
         margin-left: 10px !important; /* Reduce gap on mobile headers */
       }
 
-      #google_translate_element_mobile {
-        margin-left: 5px !important;
-        margin-right: 5px !important;
-      }
 
       /* Ensure the iframe dropdown popup doesn't break mobile bounds */
       .goog-te-menu-frame {
@@ -132,8 +102,7 @@
     /* Target Mobile Specific Viewports */
     @media screen and (max-width: 480px) {
       /* Prevent horizontal site overflow */
-      #google_translate_element,
-      #google_translate_element_mobile {
+      #google_translate_element {
         margin-left: 5px !important;
         margin-right: 5px !important;
       }
@@ -178,7 +147,6 @@ if(window.self!==window.top){
     <a href="#services" data-scroll-target="#services">Programs</a>
     <a href="#who-we-serve" data-scroll-target="#who-we-serve">Who We Serve</a>
     <a href="#contact" data-scroll-target="#contact">Contact</a>
-    <div id="google_translate_element_mobile"></div>
   </nav>
 
   <main>
