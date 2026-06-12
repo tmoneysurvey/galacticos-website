@@ -1058,3 +1058,75 @@
   color: var(--text);
   line-height: 1.4;
 }
+
+/* RADIO BUTTON STYLING */
+.radio-group {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.75rem;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-label input[type="radio"] {
+  cursor: pointer;
+  accent-color: var(--accent);
+  width: 18px;
+  height: 18px;
+}
+
+.radio-label span {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+/* POSITION CHECKBOXES GRID */
+.checkbox-positions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.position-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+.position-checkbox:hover {
+  border-color: var(--accent);
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.position-checkbox input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: var(--accent);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.position-checkbox span {
+  font-size: 0.85rem;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.position-checkbox input[type="checkbox"]:checked + span {
+  color: var(--accent);
+  font-weight: 600;
+}

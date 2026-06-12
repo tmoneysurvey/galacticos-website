@@ -387,8 +387,83 @@ if(window.self!==window.top){
             </div>
 
             <div class="form-group">
+              <label for="playerDOB">Player Date of Birth *</label>
+              <input type="date" id="playerDOB" name="playerDOB" required>
+            </div>
+
+            <div class="form-group">
+              <label>Player Gender *</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="playerGender" value="Male" required>
+                  <span>Male</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="playerGender" value="Female" required>
+                  <span>Female</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Prior Soccer Experience *</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="priorExperience" value="Yes" required>
+                  <span>Yes</span>
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="priorExperience" value="No" required>
+                  <span>No</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Positions of Interest (Select up to 3) *</label>
+              <div class="checkbox-positions">
+                <label class="position-checkbox">
+                  <input type="checkbox" name="positions" value="GK">
+                  <span>GK (Goalkeeper)</span>
+                </label>
+                <label class="position-checkbox">
+                  <input type="checkbox" name="positions" value="LB">
+                  <span>LB (Left Back)</span>
+                </label>
+                <label class="position-checkbox">
+                  <input type="checkbox" name="positions" value="CB">
+                  <span>CB (Center Back)</span>
+                </label>
+                <label class="position-checkbox">
+                  <input type="checkbox" name="positions" value="RB">
+                  <span>RB (Right Back)</span>
+                </label>
+                <label class="position-checkbox">
+                  <input type="checkbox" name="positions" value="CDM">
+                  <span>CDM (Defensive Mid)</span>
+                </label>
+                <label class="position-checkbox">
+                  <input type="checkbox" name="positions" value="LM">
+                  <span>LM (Left Mid)</span>
+                </label>
+                <label class="position-checkbox">
+                  <input type="checkbox" name="positions" value="CAM-CM">
+                  <span>CAM-CM (Central Mid)</span>
+                </label>
+                <label class="position-checkbox">
+                  <input type="checkbox" name="positions" value="RM">
+                  <span>RM (Right Mid)</span>
+                </label>
+                <label class="position-checkbox">
+                  <input type="checkbox" name="positions" value="ST">
+                  <span>ST (Striker)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
               <label for="date">Interested Start Date</label>
-              <input type="date" id="date" name="date" placeholder="">
+              <input type="date" id="date" name="date">
             </div>
 
             <div class="form-group">
@@ -440,6 +515,10 @@ if(window.self!==window.top){
         const phone = document.getElementById('phone').value.trim();
         const program = document.getElementById('program').value;
         const location = document.getElementById('location').value;
+        const playerDOB = document.getElementById('playerDOB').value;
+        const playerGender = document.querySelector('input[name="playerGender"]:checked');
+        const priorExperience = document.querySelector('input[name="priorExperience"]:checked');
+        const selectedPositions = document.querySelectorAll('input[name="positions"]:checked').length;
 
         const errors = [];
         if (!name) errors.push('Name is required');
@@ -447,6 +526,11 @@ if(window.self!==window.top){
         if (!phone) errors.push('Phone is required');
         if (!program) errors.push('Program interest is required');
         if (!location) errors.push('Preferred location is required');
+        if (!playerDOB) errors.push('Player date of birth is required');
+        if (!playerGender) errors.push('Player gender is required');
+        if (!priorExperience) errors.push('Prior soccer experience is required');
+        if (selectedPositions === 0) errors.push('Select at least 1 position');
+        if (selectedPositions > 3) errors.push('Select no more than 3 positions');
 
         if (errors.length > 0) {
           e.preventDefault();
