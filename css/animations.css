@@ -1,0 +1,46 @@
+@keyframes scroll-arrow-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-arrow-icon {
+  display: inline-block;
+  font-size: 1.35rem;
+  line-height: 1;
+  animation: scroll-arrow-bounce 1.8s ease-in-out infinite;
+  color: #d4af37;
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.55);
+}
+
+.gsap-hidden {
+  opacity: 0;
+  transform: translateY(32px);
+  will-change: opacity, transform;
+}
+
+.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-up {
+  animation: fade-in-up 0.8s ease forwards;
+}
