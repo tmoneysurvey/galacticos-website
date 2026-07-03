@@ -4,6 +4,12 @@ GALACTICOS SOCCER CLUB WEBSITE — COACH HANDOFF GUIDE
 
 Live Site: https://galacticossc.netlify.app/
 
+PROJECT SUMMARY
+Total time invested: 5.25 hours
+Timeline: June 12 – July 3, 2026
+Commits: 34 | Deployments: 34 (all successful)
+Code: 10,436 lines added | 121 lines deleted
+
 ================================================================================
 WHAT YOU HAVE
 ================================================================================
