@@ -1,0 +1,137 @@
+================================================================================
+GALACTICOS SOCCER CLUB WEBSITE — COACH HANDOFF GUIDE
+================================================================================
+
+Live Site: https://galacticossc.netlify.app/
+
+================================================================================
+WHAT YOU HAVE
+================================================================================
+
+A professional, free website that:
+- Costs $0/year to host
+- Auto-updates when you push changes
+- Shows UPSL Academy credentials, programs, contact info
+- Works on phone, tablet, and desktop
+- Contact form sends emails to galacticosoccerclub@gmail.com
+- English/Spanish bilingual support
+
+================================================================================
+YOUR OPTIONS
+================================================================================
+
+OPTION A: You Maintain It (Recommended)
+- Create free GitHub account
+- Learn basic HTML editing (30 minutes of training)
+- Push changes → site updates live in 30 seconds
+- Cost: $0 (I provide training)
+
+OPTION B: I Maintain It
+- You send me content updates
+- I edit and deploy
+- Cost: $30/month (nonprofit discount)
+
+================================================================================
+HOW TO UPDATE (OPTION A SETUP)
+================================================================================
+
+Step 1: Create GitHub Account
+1. Go to https://github.com
+2. Click "Sign up"
+3. Follow prompts (free account)
+4. Tell me your GitHub username
+
+Step 2: I'll Add You
+1. I add you as collaborator to the repo
+2. You'll get an invitation email
+3. Click "Accept" in the email
+
+Step 3: Start Editing
+1. Go to https://github.com/tmoneysurvey/galacticos-website
+2. Click "index.html"
+3. Click the pencil icon (✏️) to edit
+4. Find the text you want to change
+5. Make your edits
+6. Scroll to bottom → click "Commit changes"
+7. Add a short message (e.g., "Update news for fall season")
+8. Click "Commit to main"
+9. DONE! Site updates in ~30 seconds
+
+================================================================================
+WHAT YOU CAN SAFELY EDIT
+================================================================================
+
+✓ Team news and announcements
+✓ Program descriptions
+✓ Coach contact info (phone, email, Instagram)
+✓ Any text in the website
+✓ Replace images (logos, photos)
+
+DO NOT EDIT (unless trained):
+✗ CSS files (styling will break)
+✗ JavaScript files (animations will fail)
+✗ Folder structure
+✗ Form settings
+
+================================================================================
+COMMON CHANGES
+================================================================================
+
+To find text:
+- Open index.html
+- Press Ctrl+F (Windows) or Cmd+F (Mac)
+- Search for the text you want to change
+- Edit it directly
+- Commit
+
+Examples:
+- Search "(714) 326-2912" to change phone number
+- Search "galacticosoccerclub@gmail.com" to change email
+- Search "@galacticos_soccer_club" to change Instagram handle
+- Search "Competitive Teams" to update program description
+
+================================================================================
+REPOSITORY INFO
+================================================================================
+
+Repository: https://github.com/tmoneysurvey/galacticos-website
+Hosting: Netlify (free, auto-deploy)
+Domain: galacticossc.netlify.app (free subdomain)
+Contact Form: Submits to galacticosoccerclub@gmail.com
+Tech: Static HTML (no database, no backend)
+
+================================================================================
+PRICING FOR MY TIME
+================================================================================
+
+Option A (You self-maintain):
+- Training session: $50
+- Ongoing support: Free email/chat help or $50/hr
+
+Option B (I maintain):
+- Monthly retainer: $30/month (nonprofit rate)
+- Includes: edits, form management, occasional updates
+- Does not include: major redesigns, custom coding
+
+================================================================================
+SUPPORT & QUESTIONS
+================================================================================
+
+Email or message me with questions.
+
+Want a training session? I'll walk you through it in 30 minutes.
+
+Need me to maintain it? Just send updates and I'll deploy.
+
+================================================================================
+NEXT STEPS
+================================================================================
+
+1. Create GitHub account (free)
+2. Tell me your username
+3. I'll add you as collaborator
+4. Start making updates!
+
+Questions? Let's talk.
+
+================================================================================
