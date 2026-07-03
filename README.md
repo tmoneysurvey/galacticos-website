@@ -22,12 +22,12 @@ A professional, free website that:
 - Create free GitHub account
 - Learn basic HTML editing (30 min)
 - Push changes → site updates live in 30 seconds
-- **Cost:** $0 (I help with training)
+- **Cost:** Free (flexible training arrangement)
 
 ### Option B: I Maintain It
 - You send me updates
 - I edit and deploy
-- **Cost:** $30/month (nonprofit discount)
+- **Cost:** Estimated ~$25-35/month (ballpark, nonprofit consideration, negotiable)
 
 ---
 
@@ -69,11 +69,15 @@ A professional, free website that:
 
 ---
 
-## Support
+## Support & Pricing (Flexible Estimates)
 
 **Questions?** Email/Slack me — I'll help.
 
-**Want to learn more?** I'll do a 30-min training on GitHub + HTML.
+**Training:** Flexible arrangement (typically ~$50/hr, negotiable)  
+**Monthly maintenance (Option B):** Starting ~$25-35/month (subject to scope, nonprofit consideration)  
+**Hourly support:** ~$40-50/hr as needed  
+
+*All pricing is ballpark and adjustable. Let's work out what fits your budget.*
 
 ---
 

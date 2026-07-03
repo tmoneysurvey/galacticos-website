@@ -107,17 +107,18 @@ Contact Form: Submits to galacticosoccerclub@gmail.com
 Tech: Static HTML (no database, no backend)
 
 ================================================================================
-PRICING FOR MY TIME
+PRICING (ESTIMATES & FLEXIBLE)
 ================================================================================
 
 Option A (You self-maintain):
-- Training session: $50
-- Ongoing support: Free email/chat help or $50/hr
+- Training: Flexible arrangement (typically ~$50/hr, negotiable)
+- Ongoing support: Free email/chat help or ~$40-50/hr as needed (flexible)
 
 Option B (I maintain):
-- Monthly retainer: $30/month (nonprofit rate)
+- Monthly estimate: Starting ~$25-35/month (subject to scope, nonprofit consideration)
 - Includes: edits, form management, occasional updates
 - Does not include: major redesigns, custom coding
+- Note: Pricing adjustable based on actual work needed
 
 ================================================================================
 SUPPORT & QUESTIONS
