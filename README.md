@@ -1,6 +1,6 @@
 # Galacticos Soccer Club Website
 
-**Live Site:** https://galacticossc.netlify.app/
+**Live Site:** https://galacticosoccerclub.netlify.app/
 
 ---
 
@@ -85,7 +85,7 @@ A professional, free website that:
 
 - **Repository:** https://github.com/tmoneysurvey/galacticos-website
 - **Hosting:** Netlify (free, auto-deploy)
-- **Domain:** galacticossc.netlify.app (free)
+- **Domain:** galacticosoccerclub.netlify.app (free)
 - **Forms:** Submit to galacticosoccerclub@gmail.com
 - **Stack:** Static HTML + CSS + JavaScript (no backend needed)
 

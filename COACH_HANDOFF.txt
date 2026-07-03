@@ -2,7 +2,7 @@
 GALACTICOS SOCCER CLUB WEBSITE — COACH HANDOFF GUIDE
 ================================================================================
 
-Live Site: https://galacticossc.netlify.app/
+Live Site: https://galacticosoccerclub.netlify.app/
 
 PROJECT SUMMARY
 Total time invested: 5.25 hours
@@ -102,7 +102,7 @@ REPOSITORY INFO
 
 Repository: https://github.com/tmoneysurvey/galacticos-website
 Hosting: Netlify (free, auto-deploy)
-Domain: galacticossc.netlify.app (free subdomain)
+Domain: galacticosoccerclub.netlify.app (free subdomain)
 Contact Form: Submits to galacticosoccerclub@gmail.com
 Tech: Static HTML (no database, no backend)
 
