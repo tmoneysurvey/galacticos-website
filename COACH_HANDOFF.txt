@@ -35,7 +35,7 @@ OPTION A: You Maintain It (Recommended)
 OPTION B: I Maintain It
 - You send me content updates
 - I edit and deploy
-- Cost: $30/month (nonprofit discount)
+- Cost: Starting ~$25-35/month (subject to scope, nonprofit consideration)
 
 ================================================================================
 HOW TO UPDATE (OPTION A SETUP)
